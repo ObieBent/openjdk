@@ -14,7 +14,7 @@
         - 'main.yml'
       paths: '../vars'
 
-- include: "{{ ansible_os_family }}.yml"
+- include_tasks: "{{ ansible_os_family }}.yml"
 
 - name: main | set JAVA_HOME in profile
   lineinfile:
